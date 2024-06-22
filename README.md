@@ -4,11 +4,12 @@
 
 本项目展示了使用 Java Servlet 技术创建的简易Web应用程序。
 
-项目包含三个主要功能模块：
+项目包含四个主要功能模块：
 
 1. **基本Servlet处理**：展示如何创建和配置Servlet，处理HTTP请求和响应。
 2. **Servlet生命周期管理**：展示Servlet的生命周期方法及其调用顺序。
 3. **在线人数统计**：通过监听用户会话的创建和销毁，统计在线用户人数。
+4. **三角形面积计算**：提供一个Servlet，用于计算三角形的面积。
 
 ## 主要知识点
 
@@ -17,6 +18,7 @@
 - **Servlet生命周期**：理解Servlet的`init`、`service`和`destroy`方法的调用顺序。
 - **会话管理**：使用`HttpSession`对象管理用户会话。
 - **监听器**：使用`ServletContextListener`和`HttpSessionListener`监听应用上下文和会话事件。
+- **表单数据处理**：展示如何从HTTP请求中获取表单数据并处理。
 
 ## 代码基础结构
 
@@ -26,6 +28,7 @@ src
 │   ├── HelloServlet.java
 │   ├── LifeCycleServlet.java
 │   ├── OnlineCountServlet.java
+│   ├── TriangleAreaServlet.java
 └── webapp
     ├── index.jsp
     └── WEB-INF
@@ -37,9 +40,10 @@ src
 1. 在IDEA中导入本项目。
 2. 配置Tomcat服务器，确保其运行环境支持Java 8以上。
 3. 启动项目，访问以下URL测试各模块功能：
-    - 基本Servlet处理: `http://localhost:8080/ServletBasics_war_exploded/HelloServlet`
-    - Servlet生命周期管理: `http://localhost:8080/ServletBasics_war_exploded/LifeCycleServlet`
-    - 在线人数统计: `http://localhost:8080/ServletBasics_war_exploded/OnlineCountServlet`
+   - 基本Servlet处理: `http://localhost:8080/ServletBasics_war_exploded/HelloServlet`
+   - Servlet生命周期管理: `http://localhost:8080/ServletBasics_war_exploded/LifeCycleServlet`
+   - 在线人数统计: `http://localhost:8080/ServletBasics_war_exploded/OnlineCountServlet`
+   - 三角形面积计算: `http://localhost:8080/ServletBasics_war_exploded/TriangleAreaServlet`
 4. 查看Tomcat控制台输出，验证各模块功能是否正常。
 
 > `/ServletBasics_war_exploded` 是你的Web应用的名称。通常，这个名称来自于你的WAR文件的名称。`_war_exploded`部分通常表示你正在使用IDE（如IntelliJ IDEA）直接运行项目，而IDE为了方便开发，会将WAR包解压（即“explode”），而不是以压缩形式部署。
@@ -48,6 +52,7 @@ src
 
 - 若出现中文乱码问题，可将IDEA的VM参数设置为`-Dfile.encoding=UTF-8`。
 - 在线人数统计模块仅统计新用户上线人数，更完整的统计需要考虑用户注销或关闭浏览器的情况。
+- 三角形面积计算模块需要用户输入三角形的三边长度，确保输入的是有效的数字。
 
 ## 贡献
 

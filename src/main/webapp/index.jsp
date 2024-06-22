@@ -63,5 +63,19 @@
         <p>Servlet 容器创建全局上下文环境 <code>ServletContext</code>。</p>
         <p>通过 <code>HttpSession</code> 的 <code>isNew()</code> 方法判断新用户，统计在线人数。</p>
     </details>
+    <details>
+        <summary>计算三角形的面积</summary>
+        <br>
+        <form action="TriangleAreaServlet" method="post">
+            <label for="sideA">边A长度:</label>
+            <input type="text" id="sideA" name="sideA"><br>
+            <label for="sideB">边B长度:</label>
+            <input type="text" id="sideB" name="sideB"><br>
+            <label for="sideC">边C长度:</label>
+            <input type="text" id="sideC" name="sideC"><br>
+            <input type="submit" value="计算面积">
+        </form>
+    </details>
+
 </body>
 </html>
